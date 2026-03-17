@@ -1,0 +1,204 @@
+{% extends "frontend/base.html" %}
+{% block title %}Checkout | MyShop{% endblock %}
+
+{% block content %}
+
+<h2>Checkout</h2>
+
+<div id="checkout-container">
+
+    <!-- =================== CART SUMMARY =================== -->
+    <h3>1. Review Your Cart</h3>
+    <table class="checkout-table">
+        <thead>
+        <tr>
+            <th>Product</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Subtotal</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h3 class="total-box">
+        Total: ₹<span id="checkout-total">0.00</span>
+    </h3>
+
+    <!-- =================== CUSTOMER / SHIPPING DETAILS =================== -->
+    <h3 style="margin-top:40px;">2. Shipping Details</h3>
+
+    <form id="customer-form">
+        <input id="name" name="name" type="text" placeholder="Full Name" required>
+
+        <div class="row">
+            <input id="email" name="email" type="email" placeholder="Email" required>
+            <input id="phone" name="phone" type="text" placeholder="Phone" required>
+        </div>
+
+        <textarea id="address1" name="address" placeholder="Address (Street, Area)" required></textarea>
+
+        <input id="address2" name="address2" type="text" placeholder="Apartment / Land Mark (optional)">
+
+        <div class="row">
+            <input id="city" name="city" type="text" placeholder="City" required>
+            <input id="state" name="state" type="text" placeholder="State" required>
+        </div>
+
+        <input id="postal_code" name="pincode" type="text" placeholder="Pincode" required>
+
+        <!-- =================== PAYMENT OPTIONS =================== -->
+        <h3 style="margin-top:20px;">3. Payment Method</h3>
+
+        <label class="payment-option">
+            <input type="radio" name="payment_method" value="cod" checked>
+            Cash on Delivery (₹30 extra)
+        </label>
+
+        <label class="payment-option">
+            <input type="radio" name="payment_method" value="online">
+            Online Payment (Stripe)
+        </label>
+    </form>
+
+    <!-- =================== PLACE ORDER =================== -->
+    <button id="checkout-btn">Place Order</button>
+</div>
+
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+/* ==================== DISPLAY CART ==================== */
+function renderCheckout() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const tbody = document.querySelector('.checkout-table tbody');
+    tbody.innerHTML = '';
+
+    if (cart.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="5">Your cart is empty.</td></tr>`;
+        document.getElementById('checkout-btn').style.display = "none";
+        return;
+    }
+
+    let total = 0;
+    cart.forEach(item => {
+        const subtotal = item.price * item.quantity;
+        total += subtotal;
+
+        tbody.innerHTML += `
+            <tr>
+                <td>${item.title}</td>
+                <td><img src="${item.image}" width="70"></td>
+                <td>₹${item.price.toFixed(2)}</td>
+                <td>${item.quantity}</td>
+                <td>₹${subtotal.toFixed(2)}</td>
+            </tr>
+        `;
+    });
+
+    document.getElementById('checkout-total').textContent = total.toFixed(2);
+}
+renderCheckout();
+
+
+/* ==================== PLACE ORDER ==================== */
+document.getElementById('checkout-btn').addEventListener('click', async () => {
+
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (cart.length === 0) {
+        alert("Cart empty!");
+        return;
+    }
+
+    const form = document.querySelector('#customer-form');
+
+    if (!form.reportValidity()) {
+        alert("Please fill all required fields.");
+        return;
+    }
+
+    // Payment choice
+    const method = form.payment_method.value;
+
+    // Shipping data
+    const shipping = {
+        full_name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        address1: form.address.value,
+        address2: form.address2.value || "",
+        city: form.city.value,
+        state: form.state.value,
+        postal_code: form.pincode.value,
+        country: "India",
+        payment_method: method
+    };
+
+    /* ==================== COD ==================== */
+    if (method === "cod") {
+
+        const resp = await fetch('/api/checkout-cod/', {
+            method: 'POST',
+            headers: {"Content-Type":"application/json"},
+            body: JSON.stringify({ items: cart, shipping })
+        });
+
+        const data = await resp.json();
+        console.log("COD:", data);
+
+        if (data.success || data.status === "success") {
+            alert("Order placed successfully! Pay on delivery.");
+            localStorage.removeItem("cart");
+            window.location.href = "/orders/";  // or success page
+        } else {
+            alert(data.message || "COD failed");
+        }
+        return;
+    }
+
+    /* ==================== STRIPE CHECKOUT ==================== */
+    const resp = await fetch('/api/create-checkout-session/', {
+        method: 'POST',
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ items: cart, shipping })
+    });
+
+    const data = await resp.json();
+    console.log("Stripe:", data);
+
+    if (!data.id) {
+        alert("Payment failed. Try again.");
+        return;
+    }
+
+    const stripe = Stripe('{{ stripe_public_key }}');
+    await stripe.redirectToCheckout({ sessionId: data.id });
+});
+</script>
+
+
+<style>
+.payment-option {
+    display: block;
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.checkout-table img {
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+#checkout-btn {
+    margin-top: 30px;
+    padding: 12px 18px;
+    background: #222;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+</style>
+
+{% endblock %}

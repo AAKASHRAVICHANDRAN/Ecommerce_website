@@ -1,0 +1,69 @@
+{% extends "frontend/base.html" %}
+
+{% block title %}My Profile{% endblock %}
+
+{% block nav_links %}
+    <a href="{% url 'home' %}">Products</a>
+    <a href="{% url 'cart' %}" class="cart-icon">
+        Cart <span class="cart-count" id="cart-count">0</span>
+    </a>
+
+    <form method="post" action="{% url 'logout' %}" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit" style="background:#E53935;color:white;padding:8px 15px;border:none;border-radius:6px;cursor:pointer;">Logout</button>
+    </form>
+{% endblock %}
+
+{% block content %}
+<div class="profile-container">
+    <h2>Welcome, {{ user.first_name|default:user.username }}!</h2>
+
+    <div class="profile-box">
+        
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Phone:</strong> {{ user.profile.phone|default:"-" }}</p>
+        <p><strong>Gender:</strong> {{ user.profile.gender|default:"-" }}</p>
+        <p><strong>Address:</strong></p>
+        <textarea readonly style="width:100%;padding:10px;border-radius:6px;border:1px solid #ccc;background:#f9f9f9;">{{ user.profile.address|default:"-" }}</textarea>
+        <p><strong>City:</strong> {{ user.profile.city|default:"-" }}</p>
+        <p><strong>State:</strong> {{ user.profile.state|default:"-" }}</p>
+        <p><strong>Postal Code:</strong> {{ user.profile.postal_code|default:"-" }}</p>
+        <p><strong>Country:</strong> {{ user.profile.country|default:"-" }}</p>
+    </div>
+</div>
+
+<style>
+.profile-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.profile-box {
+    background: #fff;
+    padding: 30px;
+    width: 550px;
+    max-width: 95%;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.profile-box p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.profile-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2563eb;
+}
+
+.profile-box textarea {
+    resize: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+</style>
+{% endblock %}

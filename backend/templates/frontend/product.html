@@ -1,0 +1,38 @@
+{% extends "frontend/base.html" %}
+{% block title %}{{ product.title }} | MyShop{% endblock %}
+{% block content %}
+
+<h1>{{ product.title }}</h1>
+<div class="product-detail">
+    <img src="{{ product.image.url }}" alt="{{ product.title }}">
+    <div>
+        <p><strong>Price:</strong> ₹{{ product.price }}</p>
+        <p>{{ product.description }}</p>
+        <button id="add-to-cart">Add to Cart</button>
+    </div>
+</div>
+
+<script>
+const btn = document.getElementById('add-to-cart');
+btn.addEventListener('click', () => {
+    const id = "{{ product.id }}";
+    const title = "{{ product.title }}";
+    const price = parseFloat("{{ product.price }}");
+    const image = "{{ product.image.url }}";
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const existing = cart.find(item => item.id == id);
+
+    if (existing) {
+        existing.quantity += 1;
+    } else {
+        cart.push({ id, title, price, image, quantity: 1 });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount(); // update cart icon
+    alert(`${title} added to cart!`);
+});
+</script>
+
+{% endblock %}

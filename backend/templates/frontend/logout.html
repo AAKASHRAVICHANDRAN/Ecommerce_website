@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Logged Out</title>
+<style>
+    body {
+        background: #f4f8ff;
+        text-align: center;
+        padding-top: 80px;
+        font-family: Arial, sans-serif;
+    }
+    .logout-box {
+        background: #fff;
+        width: 450px;
+        margin: auto;
+        padding: 40px 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        animation: fadeIn 0.8s ease-in-out;
+    }
+    .logout-icon {
+        font-size: 70px;
+        color: #2ecc71;
+        margin-bottom: 20px;
+        animation: pop 0.4s ease-in-out;
+    }
+    h1 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+    p {
+        color: #555;
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+    .btn-home {
+        background: #1976D2;
+        color: #fff;
+        padding: 12px 25px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: 0.2s;
+    }
+    .btn-home:hover {
+        background: #0d5cb9;
+    }
+    @keyframes pop {
+        0% { transform: scale(0.3); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+</style>
+</head>
+<body>
+<div class="logout-box">
+    <div class="logout-icon">✔</div>
+    <h1>Thanks for visiting, {{ full_name|default:"Guest" }}!</h1>
+    <p>You have logged out successfully.</p>
+    <a href="{% url 'login' %}" class="btn-home">Login Again</a>
+</div>
+</body>
+</html>

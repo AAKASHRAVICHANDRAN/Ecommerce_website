@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to MyShop</title>
+
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+    <style>
+        /* ================= RESET & BODY ================= */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* ================= SLIDER BACKGROUND ================= */
+        .slider {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: fade 20s infinite;
+        }
+
+        .slide:nth-child(1) { background-image: url("{% static 'images/bg1.jpg' %}"); animation-delay: 0s; }
+        .slide:nth-child(2) { background-image: url("{% static 'images/bg2.jpg' %}"); animation-delay: 3s; }
+        .slide:nth-child(3) { background-image: url("{% static 'images/bg3.jpg' %}"); animation-delay: 6s; }
+        .slide:nth-child(4) { background-image: url("{% static 'images/bg4.jpg' %}"); animation-delay: 9s; }
+
+        @keyframes fade {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            25% { opacity: 1; }
+            35% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        /* ================= LANDING CONTENT ================= */
+        .landing-container {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .landing-box {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 50px 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            max-width: 500px;
+            width: 100%;
+            animation: pop 1s ease-out;
+        }
+
+        .landing-box h1 {
+            color: #2563eb;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .landing-box p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .start-btn {
+            background: #2563eb;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .start-btn:hover {
+            background: #1e40af;
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 768px) {
+            .landing-box {
+                padding: 30px 20px;
+            }
+
+            .landing-box h1 {
+                font-size: 1.6rem;
+            }
+
+            .landing-box p {
+                font-size: 1rem;
+            }
+
+            .start-btn {
+                padding: 10px 20px;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* MOBILE FIX: make background images fit mobile screens */
+        @media (max-width: 600px) {
+        .slide {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-color: #000; /* optional, avoids empty gaps */
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= SLIDER BACKGROUND ================= -->
+    <div class="slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+    </div>
+
+    <!-- ================= LANDING CONTENT ================= -->
+    <div class="landing-container">
+        <div class="landing-box">
+            <h1>Welcome to MyShop</h1>
+            <p>Discover top products in Electronics, Clothing, Home & more. Start shopping now!</p>
+            <a href="{% url 'login' %}" class="start-btn">Start Shopping</a>
+        </div>
+    </div>
+
+</body>
+</html>

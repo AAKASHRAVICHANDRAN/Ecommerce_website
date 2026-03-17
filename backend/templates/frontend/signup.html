@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Signup</title>
+<style>
+    body {
+        background:#eef3ff;
+        margin:0;
+        font-family:Arial, sans-serif;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+    }
+
+    /* ===== Container ===== */
+    .signup-wrapper {
+        width:100%;
+        max-width:1000px;
+        height:550px; /* <-- fix height */
+        background:#fff;
+        border-radius:14px;
+        overflow:hidden;
+        display:flex;
+        box-shadow:0 4px 25px rgba(0,0,0,0.12);
+    }
+
+    /* ===== Left panel (image) ===== */
+    .signup-left {
+        width:85%;
+        background:url("{% static 'images/signup_page.jpg' %}") center center no-repeat;
+        background-size:cover;
+    }
+
+    /* ===== Right panel (form) ===== */
+    .signup-right {
+        width:65%;
+        padding:25px 35px;
+        overflow-y:auto; /* scroll only when needed */
+    }
+
+    h2 {
+        text-align:center;
+        margin:0 0 18px;
+        color:#0d2a6f;
+        font-size:24px;
+        font-weight:700;
+    }
+
+    label {
+        display:block;
+        font-size:14px;
+        font-weight:600;
+        margin-bottom:4px;
+        color:#333;
+    }
+
+    input, select, textarea {
+        width:100%;
+        padding:10px;
+        margin-bottom:12px;
+        border-radius:6px;
+        border:1px solid #cbd5e1;
+        font-size:14px;
+    }
+
+    button {
+        width:100%;
+        padding:12px;
+        font-size:16px;
+        background:#2563eb;
+        color:white;
+        border:none;
+        border-radius:6px;
+        cursor:pointer;
+    }
+    button:hover {
+        background:#1e40af;
+    }
+
+    /* Error messages */
+    .error-msg {
+        background:#ffe2e2;
+        color:#b30000;
+        padding:10px;
+        margin-bottom:10px;
+        border-radius:6px;
+        font-size:14px;
+        border:1px solid #ffbdbd;
+    }
+
+    /* ===== Mobile ===== */
+    @media(max-width:900px) {
+        .signup-wrapper {
+            flex-direction:column;
+            width:90%;
+            height:auto;
+        }
+        .signup-left {
+            width:100%;
+            height:200px;
+        }
+        .signup-right {
+            width:100%;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="signup-wrapper">
+    <!-- IMAGE -->
+    <div class="signup-left"></div>
+
+    <!-- FORM -->
+    <div class="signup-right">
+        <h2>Create Account</h2>
+
+        {% if messages %}
+            {% for msg in messages %}
+                <p class="error-msg">{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <label>Full Name</label>
+            <input type="text" name="full_name" placeholder="Full Name" required>
+
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Email Address" required>
+
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Create Password" required>
+
+            <label>Phone</label>
+            <input type="text" name="phone" placeholder="Phone Number">
+
+            <label>Gender</label>
+            <select name="gender">
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label>Address</label>
+            <textarea name="address" rows="2" placeholder="Full address"></textarea>
+
+            <label>City</label>
+            <input type="text" name="city" placeholder="City">
+
+            <label>State</label>
+            <input type="text" name="state" placeholder="State">
+
+            <label>Postal Code</label>
+            <input type="text" name="postal_code" placeholder="Postal Code">
+
+            <label>Country</label>
+            <input type="text" name="country" value="India">
+
+            <button type="submit">Signup</button>
+        </form>
+
+        <p style="text-align:center; margin-top:10px;">
+            Already have an account? <a href="{% url 'login' %}">Login</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>

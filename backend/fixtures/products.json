@@ -1,0 +1,1287 @@
+[
+  {
+    "model": "core.category",
+    "pk": 1,
+    "fields": {"name": "Electronics", "slug": "electronics"}
+  },
+  {
+    "model": "core.category",
+    "pk": 2,
+    "fields": {"name": "Footwear", "slug": "footwear"}
+  },
+  {
+    "model": "core.category",
+    "pk": 3,
+    "fields": {"name": "Clothing", "slug": "clothing"}
+  },
+  {
+    "model": "core.category",
+    "pk": 4,
+    "fields": {"name": "Accessories", "slug": "accessories"}
+  },
+  {
+    "model": "core.category",
+    "pk": 5,
+    "fields": {"name": "Home & Kitchen", "slug": "home-&-kitchen"}
+  },
+  {
+    "model": "core.category",
+    "pk": 6,
+    "fields": {"name": "Sports & Outdoors", "slug": "sports-&-outdoors"}
+  },
+  {
+    "model": "core.category",
+    "pk": 7,
+    "fields": {"name": "Toys & Games", "slug": "toys-&-games"}
+  },
+  {
+    "model": "core.category",
+    "pk": 8,
+    "fields": {"name": "Health & Personal Care", "slug": "health-&-personal-care"}
+  },
+  {
+    "model": "core.category",
+    "pk": 9,
+    "fields": {"name": "Beauty & Personal Care", "slug": "beauty-&-personal-care"}
+  },
+  {
+    "model": "core.category",
+    "pk": 10,
+    "fields": {"name": "Books", "slug": "books"}
+  },
+  
+  
+  {
+    "model": "core.product",
+    "pk": 1,
+    "fields": {
+      "title": "Apple iPhone 15 Pro",
+      "slug": "apple-iphone-15-pro",
+      "category": 1,
+      "image": "electronics/iphone15pro.jpg",
+      "price": 1199.99,
+      "description": "The latest Apple iPhone 15 Pro with A17 Bionic chip, 6.1-inch Super Retina XDR display, and advanced camera system."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 2,
+    "fields": {
+      "title": "Samsung Galaxy S23 Ultra",
+      "slug": "samsung-galaxy-s23-ultra",
+      "category": 1,
+      "image": "electronics/galaxys23ultra.jpg",
+      "price": 1099.99,
+      "description": "Samsung Galaxy S23 Ultra featuring a 200MP camera, Snapdragon 8 Gen 2, and 6.8-inch Dynamic AMOLED display."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 3,
+    "fields": {
+      "title": "Sony WH-1000XM5 Headphones",
+      "slug": "sony-wh-1000xm5-headphones",
+      "category": 1,
+      "image": "electronics/sonywh1000xm5.jpg",
+      "price": 399.99,
+      "description": "Industry-leading noise cancellation wireless headphones with 30-hour battery life and superior sound quality."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 4,
+    "fields": {
+      "title": "Dell XPS 13 Laptop",
+      "slug": "dell-xps-13-laptop",
+      "category": 1,
+      "image": "electronics/dellxps13.jpg",
+      "price": 999.99,
+      "description": "Ultra-portable laptop with Intel Core i7, 16GB RAM, 512GB SSD, and stunning 13.4-inch InfinityEdge display."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 5,
+    "fields": {
+      "title": "Apple MacBook Air M2",
+      "slug": "apple-macbook-air-m2",
+      "category": 1,
+      "image": "electronics/macbookairm2.jpg",
+      "price": 1199.99,
+      "description": "Lightweight MacBook Air with Apple M2 chip, 13.6-inch Retina display, and up to 18 hours battery life."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 6,
+    "fields": {
+      "title": "GoPro Hero 12 Black",
+      "slug": "gopro-hero-12-black",
+      "category": 1,
+      "image": "electronics/goprohero12.jpg",
+      "price": 499.99,
+      "description": "Capture stunning 5.3K video with GoPro Hero 12 Black, waterproof up to 33ft, with HyperSmooth stabilization."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 7,
+    "fields": {
+      "title": "Amazon Echo (5th Gen)",
+      "slug": "amazon-echo-5th-gen",
+      "category": 1,
+      "image": "electronics/amazonecho5.jpg",
+      "price": 990.99,
+      "description": "Smart speaker with Alexa voice assistant, premium sound, and smart home control features."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 8,
+    "fields": {
+      "title": "Fitbit Charge 6",
+      "slug": "fitbit-charge-6",
+      "category": 1,
+      "image": "electronics/fitbitcharge6.jpg",
+      "price": 179.99,
+      "description": "Advanced fitness tracker with heart rate monitoring, sleep tracking, and up to 7-day battery life."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 9,
+    "fields": {
+      "title": "Canon EOS R6 Camera",
+      "slug": "canon-eos-r6-camera",
+      "category": 1,
+      "image": "electronics/canoneosr6.jpg",
+      "price": 2499.99,
+      "description": "Professional mirrorless camera with 20MP full-frame sensor, 4K video recording, and fast autofocus."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 10,
+    "fields": {
+      "title": "Nintendo Switch OLED",
+      "slug": "nintendo-switch-oled",
+      "category": 1,
+      "image": "electronics/switcholed.jpg",
+      "price": 349.99,
+      "description": "Portable gaming console with 7-inch OLED screen, enhanced audio, and versatile docked or handheld play."
+    }
+  },
+  
+  {
+    "model": "core.product",
+    "pk": 11,
+    "fields": {
+      "title": "Nike Air Max 270",
+      "slug": "nike-air-max-270",
+      "category": 2,
+      "image": "footwear/nikeairmax270.jpg",
+      "price": 150.00,
+      "description": "Comfortable and stylish sneakers with Air Max cushioning for all-day wear."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 12,
+    "fields": {
+      "title": "Adidas Ultraboost 22",
+      "slug": "adidas-ultraboost-22",
+      "category": 2,
+      "image": "footwear/adidasultraboost22.jpg",
+      "price": 180.00,
+      "description": "High-performance running shoes with responsive Boost midsole and lightweight knit upper."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 13,
+    "fields": {
+      "title": "Puma RS-X³",
+      "slug": "puma-rsx3",
+      "category": 2,
+      "image": "footwear/pumarsx3.jpg",
+      "price": 130.00,
+      "description": "Retro-inspired sneakers with chunky sole design and bold color accents."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 14,
+    "fields": {
+      "title": "Reebok Nano X3",
+      "slug": "reebok-nano-x3",
+      "category": 2,
+      "image": "footwear/reeboknanox3.jpg",
+      "price": 140.00,
+      "description": "Durable cross-training shoes designed for high-intensity workouts and comfort."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 15,
+    "fields": {
+      "title": "New Balance 990v5",
+      "slug": "new-balance-990v5",
+      "category": 2,
+      "image": "footwear/newbalance990v5.jpg",
+      "price": 175.00,
+      "description": "Classic running shoes with ENCAP midsole for stability and cushioning."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 16,
+    "fields": {
+      "title": "Vans Old Skool",
+      "slug": "vans-old-skool",
+      "category": 2,
+      "image": "footwear/vansoldskool.jpg",
+      "price": 650.00,
+      "description": "Iconic skate shoes with durable canvas and suede upper and signature side stripe."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 17,
+    "fields": {
+      "title": "Converse Chuck Taylor All Star",
+      "slug": "converse-chuck-taylor-all-star",
+      "category": 2,
+      "image": "footwear/conversechucktaylor.jpg",
+      "price": 550.00,
+      "description": "Classic canvas sneakers with timeless design and durable rubber sole."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 18,
+    "fields": {
+      "title": "Asics Gel-Kayano 29",
+      "slug": "asics-gel-kayano-29",
+      "category": 2,
+      "image": "footwear/asicsgelkayano29.jpg",
+      "price": 160.00,
+      "description": "Premium running shoes with Gel cushioning and supportive fit for long-distance running."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 19,
+    "fields": {
+      "title": "Brooks Ghost 15",
+      "slug": "brooks-ghost-15",
+      "category": 2,
+      "image": "footwear/brooksgghost15.jpg",
+      "price": 140.00,
+      "description": "Soft and smooth running shoes with DNA Loft cushioning and breathable upper mesh."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 20,
+    "fields": {
+      "title": "Under Armour HOVR Phantom 3",
+      "slug": "under-armour-hovr-phantom-3",
+      "category": 2,
+      "image": "footwear/underarmourhovr3.jpg",
+      "price": 150.00,
+      "description": "High-performance training shoes with UA HOVR technology for energy return and comfort."
+    }
+  },
+
+  
+  {
+    "model": "core.product",
+    "pk": 21,
+    "fields": {
+      "title": "Levi's Men's 501 Original Jeans",
+      "slug": "levis-mens-501-jeans",
+      "category": 3,
+      "image": "clothing/levis501.jpg",
+      "price": 600.00,
+      "description": "Classic straight-fit jeans made from durable cotton denim for everyday wear."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 22,
+    "fields": {
+      "title": "Tommy Hilfiger Men's Polo Shirt",
+      "slug": "tommy-hilfiger-mens-polo",
+      "category": 3,
+      "image": "clothing/tommyhilfigerpolo.jpg",
+      "price": 450.00,
+      "description": "Cotton polo shirt with signature logo embroidery and comfortable fit."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 23,
+    "fields": {
+      "title": "Nike Sportswear Hoodie",
+      "slug": "nike-sportswear-hoodie",
+      "category": 3,
+      "image": "clothing/nikesportswearhoodie.jpg",
+      "price": 550.00,
+      "description": "Soft fleece hoodie with Nike logo, perfect for casual wear and workouts."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 24,
+    "fields": {
+      "title": "Adidas Originals Track Jacket",
+      "slug": "adidas-originals-track-jacket",
+      "category": 3,
+      "image": "clothing/adidastrackjacket.jpg",
+      "price": 700.00,
+      "description": "Retro track jacket with iconic 3-stripes and zip closure for sporty style."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 25,
+    "fields": {
+      "title": "H&M Slim Fit Shirt",
+      "slug": "hm-slim-fit-shirt",
+      "category": 3,
+      "image": "clothing/hmslimfitshirt.jpg",
+      "price": 300.00,
+      "description": "Cotton slim-fit shirt, suitable for office or casual outings."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 26,
+    "fields": {
+      "title": "Zara Basic T-Shirt",
+      "slug": "zara-basic-tshirt",
+      "category": 3,
+      "image": "clothing/zarabasictshirt.jpg",
+      "price": 200.00,
+      "description": "Comfortable and versatile T-shirt in soft cotton, ideal for everyday wear."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 27,
+    "fields": {
+      "title": "Uniqlo Ultra Light Down Jacket",
+      "slug": "uniqlo-ultralight-down-jacket",
+      "category": 3,
+      "image": "clothing/uniqlo-ultralightdown.jpg",
+      "price": 120.00,
+      "description": "Lightweight down jacket for warmth without bulk, perfect for travel."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 28,
+    "fields": {
+      "title": "Polo Ralph Lauren Classic Shirt",
+      "slug": "polo-ralph-lauren-classic-shirt",
+      "category": 3,
+      "image": "clothing/poloralphclassicshirt.jpg",
+      "price": 850.00,
+      "description": "Premium cotton shirt with tailored fit and iconic Polo logo."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 29,
+    "fields": {
+      "title": "GAP Fleece Sweatshirt",
+      "slug": "gap-fleece-sweatshirt",
+      "category": 3,
+      "image": "clothing/gapfleece.jpg",
+      "price": 400.00,
+      "description": "Soft and cozy fleece sweatshirt, ideal for casual comfort."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 30,
+    "fields": {
+      "title": "Hugo Boss Slim Fit Blazer",
+      "slug": "hugo-boss-slim-fit-blazer",
+      "category": 3,
+      "image": "clothing/hugobossblazer.jpg",
+      "price": 250.00,
+      "description": "Elegant slim-fit blazer in premium fabric, perfect for formal occasions."
+    }
+  },
+
+  
+  {
+    "model": "core.product",
+    "pk": 31,
+    "fields": {
+      "title": "Ray-Ban Aviator Sunglasses",
+      "slug": "ray-ban-aviator-sunglasses",
+      "category": 4,
+      "image": "accessories/rayban-aviator.jpg",
+      "price": 150.00,
+      "description": "Classic aviator sunglasses with polarized lenses for clear vision and style."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 32,
+    "fields": {
+      "title": "Fossil Leather Wallet",
+      "slug": "fossil-leather-wallet",
+      "category": 4,
+      "image": "accessories/fossil-wallet.jpg",
+      "price": 450.00,
+      "description": "Premium leather wallet with multiple card slots and coin pocket."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 33,
+    "fields": {
+      "title": "Casio Digital Watch",
+      "slug": "casio-digital-watch",
+      "category": 4,
+      "image": "accessories/casio-digital-watch.jpg",
+      "price": 350.00,
+      "description": "Durable and lightweight digital watch with alarm, backlight, and stopwatch."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 34,
+    "fields": {
+      "title": "Michael Kors Women's Handbag",
+      "slug": "michael-kors-womens-handbag",
+      "category": 4,
+      "image": "accessories/michaelkors-handbag.jpg",
+      "price": 220.00,
+      "description": "Stylish and spacious handbag in premium leather with gold-tone hardware."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 35,
+    "fields": {
+      "title": "Gucci Silk Tie",
+      "slug": "gucci-silk-tie",
+      "category": 4,
+      "image": "accessories/gucci-silk-tie.jpg",
+      "price": 120.00,
+      "description": "Elegant silk tie with signature Gucci pattern, perfect for formal wear."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 36,
+    "fields": {
+      "title": "Apple AirTag Key Finder",
+      "slug": "apple-airtag-key-finder",
+      "category": 4,
+      "image": "accessories/apple-airtag.jpg",
+      "price": 300.00,
+      "description": "Track your keys, bag, or other items with this smart AirTag device."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 37,
+    "fields": {
+      "title": "Skagen Minimalist Watch",
+      "slug": "skagen-minimalist-watch",
+      "category": 4,
+      "image": "accessories/skagen-watch.jpg",
+      "price": 1400.00,
+      "description": "Slim and sleek Danish design watch with stainless steel mesh strap."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 38,
+    "fields": {
+      "title": "North Face Beanie Hat",
+      "slug": "north-face-beanie-hat",
+      "category": 4,
+      "image": "accessories/northface-beanie.jpg",
+      "price": 250.00,
+      "description": "Warm and comfortable beanie hat, perfect for winter and outdoor activities."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 39,
+    "fields": {
+      "title": "Ray-Ban Wayfarer Sunglasses",
+      "slug": "ray-ban-wayfarer-sunglasses",
+      "category": 4,
+      "image": "accessories/rayban-wayfarer.jpg",
+      "price": 160.00,
+      "description": "Iconic Wayfarer design with durable frame and UV protection lenses."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 40,
+    "fields": {
+      "title": "Tissot Leather Strap Watch",
+      "slug": "tissot-leather-strap-watch",
+      "category": 4,
+      "image": "accessories/tissot-leather-watch.jpg",
+      "price": 200.00,
+      "description": "Classic Swiss-made watch with genuine leather strap and precise quartz movement."
+    }
+  },
+
+  
+  {
+    "model": "core.product",
+    "pk": 41,
+    "fields": {
+      "title": "Instant Pot Duo 7-in-1",
+      "slug": "instant-pot-duo-7-in-1",
+      "category": 5,
+      "image": "home_kitchen/instant-pot-duo.jpg",
+      "price": 990.00,
+      "description": "Multi-use programmable pressure cooker, slow cooker, rice cooker, steamer, sauté pan, and more."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 42,
+    "fields": {
+      "title": "KitchenAid Stand Mixer",
+      "slug": "kitchenaid-stand-mixer",
+      "category": 5,
+      "image": "home_kitchen/kitchenaid-mixer.jpg",
+      "price": 379.00,
+      "description": "Versatile stand mixer with multiple attachments for baking, mixing, and whipping."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 43,
+    "fields": {
+      "title": "Dyson V11 Cordless Vacuum",
+      "slug": "dyson-v11-cordless-vacuum",
+      "category": 5,
+      "image": "home_kitchen/dyson-v11-vacuum.jpg",
+      "price": 599.00,
+      "description": "Powerful cordless vacuum cleaner with advanced suction technology and long battery life."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 44,
+    "fields": {
+      "title": "Ninja Professional Blender",
+      "slug": "ninja-professional-blender",
+      "category": 5,
+      "image": "home_kitchen/ninja-blender.jpg",
+      "price": 120.00,
+      "description": "High-performance blender with multiple speed settings and ice crushing capability."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 45,
+    "fields": {
+      "title": "Philips Air Fryer",
+      "slug": "philips-air-fryer",
+      "category": 5,
+      "image": "home_kitchen/philips-airfryer.jpg",
+      "price": 199.00,
+      "description": "Air fryer with rapid air technology for healthier frying with minimal oil."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 46,
+    "fields": {
+      "title": "Le Creuset Cast Iron Skillet",
+      "slug": "le-creuset-cast-iron-skillet",
+      "category": 5,
+      "image": "home_kitchen/lecreuset-skillet.jpg",
+      "price": 850.00,
+      "description": "Durable cast iron skillet for even cooking and heat retention, ideal for stovetop or oven."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 47,
+    "fields": {
+      "title": "Cuisinart 12-Piece Knife Set",
+      "slug": "cuisinart-12-piece-knife-set",
+      "category": 5,
+      "image": "home_kitchen/cuisinart-knifeset.jpg",
+      "price": 700.00,
+      "description": "Complete knife set with stainless steel blades and ergonomic handles for precision cutting."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 48,
+    "fields": {
+      "title": "Breville Espresso Machine",
+      "slug": "breville-espresso-machine",
+      "category": 5,
+      "image": "home_kitchen/breville-espresso.jpg",
+      "price": 450.00,
+      "description": "High-quality espresso machine for cafe-style coffee, cappuccino, and latte at home."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 49,
+    "fields": {
+      "title": "Vitamix Professional Blender",
+      "slug": "vitamix-professional-blender",
+      "category": 5,
+      "image": "home_kitchen/vitamix-blender.jpg",
+      "price": 500.00,
+      "description": "Commercial-grade blender for smoothies, soups, and nut butter with variable speed control."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 50,
+    "fields": {
+      "title": "Simplehuman Sensor Trash Can",
+      "slug": "simplehuman-sensor-trash-can",
+      "category": 5,
+      "image": "home_kitchen/simplehuman-trashcan.jpg",
+      "price": 150.00,
+      "description": "Hands-free stainless steel trash can with motion sensor lid and fingerprint-proof finish."
+    }
+  },
+
+  
+  {
+    "model": "core.product",
+    "pk": 51,
+    "fields": {
+      "title": "Wilson Evolution Basketball",
+      "slug": "wilson-evolution-basketball",
+      "category": 6,
+      "image": "sports_outdoors/wilson-evolution-basketball.jpg",
+      "price": 650.00,
+      "description": "High-quality indoor basketball with premium composite leather for superior grip and control."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 52,
+    "fields": {
+      "title": "Nike Air Zoom Pegasus Running Shoes",
+      "slug": "nike-air-zoom-pegasus-shoes",
+      "category": 6,
+      "image": "sports_outdoors/nike-pegasus-shoes.jpg",
+      "price": 120.00,
+      "description": "Lightweight running shoes with responsive cushioning and breathable mesh upper."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 53,
+    "fields": {
+      "title": "Adidas Soccer Ball",
+      "slug": "adidas-soccer-ball",
+      "category": 6,
+      "image": "sports_outdoors/adidas-soccer-ball.jpg",
+      "price": 300.00,
+      "description": "Durable official-size soccer ball for training and match play, excellent touch and control."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 54,
+    "fields": {
+      "title": "Garmin Forerunner 245 GPS Watch",
+      "slug": "garmin-forerunner-245-gps-watch",
+      "category": 6,
+      "image": "sports_outdoors/garmin-forerunner-245.jpg",
+      "price": 250.00,
+      "description": "GPS running watch with heart rate monitoring, performance metrics, and training plans."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 55,
+    "fields": {
+      "title": "Coleman Sundome 4-Person Tent",
+      "slug": "coleman-sundome-4-person-tent",
+      "category": 6,
+      "image": "sports_outdoors/coleman-tent.jpg",
+      "price": 100.00,
+      "description": "Spacious and durable 4-person tent with easy setup and WeatherTec system to stay dry."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 56,
+    "fields": {
+      "title": "Bowflex SelectTech Adjustable Dumbbells",
+      "slug": "bowflex-selecttech-adjustable-dumbbells",
+      "category": 6,
+      "image": "sports_outdoors/bowflex-dumbbells.jpg",
+      "price": 350.00,
+      "description": "Adjustable dumbbells ranging from 5 to 52.5 lbs, perfect for home strength training."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 57,
+    "fields": {
+      "title": "Under Armour HeatGear Compression Shirt",
+      "slug": "under-armour-heatgear-compression-shirt",
+      "category": 6,
+      "image": "sports_outdoors/underarmour-compression.jpg",
+      "price": 350.00,
+      "description": "Moisture-wicking compression shirt for athletic performance and comfort."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 58,
+    "fields": {
+      "title": "Speedo Swim Goggles",
+      "slug": "speedo-swim-goggles",
+      "category": 6,
+      "image": "sports_outdoors/speedo-goggles.jpg",
+      "price": 200.00,
+      "description": "Anti-fog swim goggles with adjustable strap for a comfortable, secure fit."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 59,
+    "fields": {
+      "title": "Schwinn Fitness Bike",
+      "slug": "schwinn-fitness-bike",
+      "category": 6,
+      "image": "sports_outdoors/schwinn-fitness-bike.jpg",
+      "price": 300.00,
+      "description": "Indoor stationary bike with adjustable resistance and LCD monitor for tracking workouts."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 60,
+    "fields": {
+      "title": "YETI Rambler 30oz Tumbler",
+      "slug": "yeti-rambler-30oz-tumbler",
+      "category": 6,
+      "image": "sports_outdoors/yeti-rambler-tumbler.jpg",
+      "price": 400.00,
+      "description": "Durable stainless steel tumbler with double-wall vacuum insulation to keep drinks hot or cold."
+    }
+  },
+
+  
+  {
+    "model": "core.product",
+    "pk": 61,
+    "fields": {
+      "title": "LEGO City Fire Station Set",
+      "slug": "lego-city-fire-station-set",
+      "category": 7,
+      "image": "toys_games/lego-fire-station.jpg",
+      "price": 850.00,
+      "description": "Exciting LEGO City fire station set with fire trucks, firefighters, and rescue scenarios for kids 6+."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 62,
+    "fields": {
+      "title": "Barbie Dreamhouse Dollhouse",
+      "slug": "barbie-dreamhouse-dollhouse",
+      "category": 7,
+      "image": "toys_games/barbie-dreamhouse.jpg",
+      "price": 200.00,
+      "description": "Three-story Barbie Dreamhouse with interactive features, furniture, and accessories for imaginative play."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 63,
+    "fields": {
+      "title": "Hot Wheels 50-Car Pack",
+      "slug": "hot-wheels-50-car-pack",
+      "category": 7,
+      "image": "toys_games/hotwheels-50-pack.jpg",
+      "price": 100.00,
+      "description": "Massive Hot Wheels pack with 50 collectible cars for racing, collecting, and customizing fun."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 64,
+    "fields": {
+      "title": "NERF N-Strike Elite Blaster",
+      "slug": "nerf-nstrike-elite-blaster",
+      "category": 7,
+      "image": "toys_games/nerf-elite-blaster.jpg",
+      "price": 300.00,
+      "description": "High-performance NERF blaster with long-range darts and rapid-fire capability for outdoor play."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 65,
+    "fields": {
+      "title": "Crayola Inspiration Art Case",
+      "slug": "crayola-inspiration-art-case",
+      "category": 7,
+      "image": "toys_games/crayola-art-case.jpg",
+      "price": 250.00,
+      "description": "Complete art set with crayons, markers, colored pencils, and paper for creative kids of all ages."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 66,
+    "fields": {
+      "title": "Monopoly Classic Board Game",
+      "slug": "monopoly-classic-board-game",
+      "category": 7,
+      "image": "toys_games/monopoly-classic.jpg",
+      "price": 200.00,
+      "description": "Classic Monopoly board game for family fun with property trading, chance cards, and strategy play."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 67,
+    "fields": {
+      "title": "Play-Doh 36-Can Mega Pack",
+      "slug": "play-doh-36-can-mega-pack",
+      "category": 7,
+      "image": "toys_games/playdoh-36-pack.jpg",
+      "price": 350.00,
+      "description": "Vibrant Play-Doh set with 36 colors to mold, sculpt, and create endless imaginative designs."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 68,
+    "fields": {
+      "title": "Fisher-Price Laugh & Learn Smart Stages Chair",
+      "slug": "fisher-price-laugh-learn-chair",
+      "category": 7,
+      "image": "toys_games/fisherprice-chair.jpg",
+      "price": 400.00,
+      "description": "Interactive learning chair for toddlers with songs, phrases, and fun activities to encourage early development."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 69,
+    "fields": {
+      "title": "Ravensburger Puzzle 1000 Pieces – Scenic Landscape",
+      "slug": "ravensburger-1000-piece-puzzle",
+      "category": 7,
+      "image": "toys_games/ravensburger-puzzle.jpg",
+      "price": 250.00,
+      "description": "High-quality 1000-piece jigsaw puzzle featuring a beautiful scenic landscape, perfect for all puzzle enthusiasts."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 70,
+    "fields": {
+      "title": "Nintendo Switch OLED Console",
+      "slug": "nintendo-switch-oled-console",
+      "category": 7,
+      "image": "toys_games/nintendo-switch-oled.jpg",
+      "price": 350.00,
+      "description": "Latest Nintendo Switch OLED console with vibrant display, enhanced audio, and versatile handheld gaming experience."
+    }
+  },
+
+  
+  {
+    "model": "core.product",
+    "pk": 71,
+    "fields": {
+      "title": "Oral-B Pro 1000 Electric Toothbrush",
+      "slug": "oral-b-pro-1000-electric-toothbrush",
+      "category": 8,
+      "image": "health_personal/oralb-pro1000.jpg",
+      "price": 500.00,
+      "description": "Rechargeable electric toothbrush with superior plaque removal and a built-in timer for optimal dental hygiene."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 72,
+    "fields": {
+      "title": "Philips Norelco Shaver 4500",
+      "slug": "philips-norelco-shaver-4500",
+      "category": 8,
+      "image": "health_personal/philips-norelco-4500.jpg",
+      "price": 800.00,
+      "description": "Advanced electric shaver with MultiPrecision blades and a comfortable contour-following design for a smooth shave."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 73,
+    "fields": {
+      "title": "Fitbit Charge 6 Fitness Tracker",
+      "slug": "fitbit-charge-6-fitness-tracker",
+      "category": 8,
+      "image": "health_personal/fitbit-charge6.jpg",
+      "price": 130.00,
+      "description": "Smart fitness tracker with heart rate monitoring, sleep tracking, and GPS to help achieve health and fitness goals."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 74,
+    "fields": {
+      "title": "Neutrogena Hydro Boost Water Gel",
+      "slug": "neutrogena-hydro-boost-water-gel_new",
+      "category": 8,
+      "image": "health_personal/neutrogena-hydroboost.jpg",
+      "price": 200.00,
+      "description": "Hydrating face gel with hyaluronic acid to provide long-lasting moisture for all skin types."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 75,
+    "fields": {
+      "title": "Braun ThermoScan 7 Digital Ear Thermometer",
+      "slug": "braun-thermoscan-7-ear-thermometer",
+      "category": 8,
+      "image": "health_personal/braun-thermoscan7.jpg",
+      "price": 550.00,
+      "description": "Accurate ear thermometer with pre-warmed tip and color-coded fever guidance for family use."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 76,
+    "fields": {
+      "title": "Pure Enrichment MistAire Ultrasonic Cool Mist Humidifier",
+      "slug": "pure-enrichment-mistaire-humidifier",
+      "category": 8,
+      "image": "health_personal/mistaire-humidifier.jpg",
+      "price": 400.00,
+      "description": "Ultrasonic cool mist humidifier with 1.5L capacity to keep your room comfortable and hydrated."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 77,
+    "fields": {
+      "title": "Colgate Optic White Toothpaste",
+      "slug": "colgate-optic-white-toothpaste",
+      "category": 8,
+      "image": "health_personal/colgate-opticwhite.jpg",
+      "price": 160.00,
+      "description": "Whitening toothpaste formulated to remove surface stains and brighten your smile effectively."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 78,
+    "fields": {
+      "title": "Philips Sonicare ProtectiveClean 6100",
+      "slug": "philips-sonicare-protectiveclean-6100",
+      "category": 8,
+      "image": "health_personal/sonicare-6100.jpg",
+      "price": 120.00,
+      "description": "Electric toothbrush with pressure sensor, multiple modes, and smart timer to protect gums and teeth."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 79,
+    "fields": {
+      "title": "Tazo Herbal Tea Assortment",
+      "slug": "tazo-herbal-tea-assortment",
+      "category": 8,
+      "image": "health_personal/tazo-herbal-tea.jpg",
+      "price": 150.00,
+      "description": "Refreshing herbal tea variety pack for a healthy and soothing beverage experience."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 80,
+    "fields": {
+      "title": "Nature’s Bounty Vitamin D3 2000 IU",
+      "slug": "natures-bounty-vitamin-d3-2000-iu",
+      "category": 8,
+      "image": "health_personal/natures-bounty-vitamin-d3.jpg",
+      "price": 120.00,
+      "description": "Essential vitamin D3 supplement to support bone, teeth, and immune health."
+    }
+  },
+
+  
+  {
+    "model": "core.product",
+    "pk": 81,
+    "fields": {
+      "title": "Revlon One-Step Hair Dryer & Volumizer",
+      "slug": "revlon-one-step-hair-dryer-volumizer",
+      "category": 9,
+      "image": "beauty/revlon-one-step-hair-dryer.jpg",
+      "price": 600.00,
+      "description": "Hair dryer and volumizer in one tool for fast drying and styling, leaving hair smooth and shiny."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 82,
+    "fields": {
+      "title": "Olay Regenerist Micro-Sculpting Cream",
+      "slug": "olay-regenerist-micro-sculpting-cream",
+      "category": 9,
+      "image": "beauty/olay-regenerist-cream.jpg",
+      "price": 300.00,
+      "description": "Anti-aging moisturizer with hyaluronic acid, amino-peptides, and niacinamide to hydrate and firm skin."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 83,
+    "fields": {
+      "title": "Philips Sonicare ProtectiveClean Electric Toothbrush",
+      "slug": "philips-sonicare-protectiveclean-toothbrush",
+      "category": 9,
+      "image": "beauty/philips-sonicare-toothbrush.jpg",
+      "price": 800.00,
+      "description": "Electric toothbrush with pressure sensor and multiple cleaning modes for superior oral care."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 84,
+    "fields": {
+      "title": "Neutrogena Hydro Boost Water Gel",
+      "slug": "neutrogena-hydro-boost-water-gel",
+      "category": 9,
+      "image": "beauty/neutrogena-hydro-boost.jpg",
+      "price": 200.00,
+      "description": "Lightweight moisturizer with hyaluronic acid that instantly hydrates and locks in moisture."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 85,
+    "fields": {
+      "title": "Dyson Airwrap Complete Styler",
+      "slug": "dyson-airwrap-complete-styler",
+      "category": 9,
+      "image": "beauty/dyson-airwrap-complete.jpg",
+      "price": 550.00,
+      "description": "Multi-styler for curling, waving, smoothing, and drying hair without extreme heat."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 86,
+    "fields": {
+      "title": "Braun Series 7 Electric Shaver for Men",
+      "slug": "braun-series-7-electric-shaver-men",
+      "category": 9,
+      "image": "beauty/braun-series7-shaver.jpg",
+      "price": 200.00,
+      "description": "Advanced electric shaver with sonic technology and precision head for a close, comfortable shave."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 87,
+    "fields": {
+      "title": "L'Oreal Paris Infallible Liquid Foundation",
+      "slug": "loreal-paris-infallible-liquid-foundation",
+      "category": 9,
+      "image": "beauty/loreal-infallible-foundation.jpg",
+      "price": 150.00,
+      "description": "Long-lasting, full-coverage foundation with smooth application and natural finish."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 88,
+    "fields": {
+      "title": "Foreo Luna 3 Facial Cleansing Brush",
+      "slug": "foreo-luna-3-facial-cleansing-brush",
+      "category": 9,
+      "image": "beauty/foreo-luna3.jpg",
+      "price": 180.00,
+      "description": "Silicone facial cleansing device with T-Sonic pulsations for deep pore cleansing and anti-aging care."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 89,
+    "fields": {
+      "title": "Maybelline Lash Sensational Mascara",
+      "slug": "maybelline-lash-sensational-mascara",
+      "category": 9,
+      "image": "beauty/maybelline-lash-sensational.jpg",
+      "price": 100.00,
+      "description": "Volumizing mascara with fanning brush for beautifully defined, full lashes."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 90,
+    "fields": {
+      "title": "Bath & Body Works Aromatherapy Eucalyptus Spearmint Candle",
+      "slug": "bbw-aromatherapy-eucalyptus-spearmint-candle",
+      "category": 9,
+      "image": "beauty/bbw-eucalyptus-candle.jpg",
+      "price": 250.00,
+      "description": "Relaxing aromatherapy candle with eucalyptus and spearmint essential oils for a calming ambiance."
+    }
+  },
+
+  
+  {
+    "model": "core.product",
+    "pk": 91,
+    "fields": {
+      "title": "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+      "slug": "atomic-habits-james-clear",
+      "category": 10,
+      "image": "books/atomic-habits.jpg",
+      "price": 180.00,
+      "description": "A practical guide by James Clear on how small habits can lead to remarkable results in life and work."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 92,
+    "fields": {
+      "title": "The Midnight Library",
+      "slug": "the-midnight-library-matt-haig",
+      "category": 10,
+      "image": "books/the-midnight-library.jpg",
+      "price": 140.00,
+      "description": "A novel by Matt Haig exploring choices, regrets, and the infinite possibilities of life."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 93,
+    "fields": {
+      "title": "Sapiens: A Brief History of Humankind",
+      "slug": "sapiens-brief-history-of-humankind",
+      "category": 10,
+      "image": "books/sapiens.jpg",
+      "price": 200.00,
+      "description": "Yuval Noah Harari’s bestselling exploration of human history, evolution, and civilization."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 94,
+    "fields": {
+      "title": "Educated: A Memoir",
+      "slug": "educated-memoir-tara-westover",
+      "category": 10,
+      "image": "books/educated.jpg",
+      "price": 160.00,
+      "description": "Tara Westover’s inspiring memoir about growing up in a strict family and pursuing education against all odds."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 95,
+    "fields": {
+      "title": "The Alchemist",
+      "slug": "the-alchemist-paulo-coelho",
+      "category": 10,
+      "image": "books/the-alchemist.jpg",
+      "price": 120.00,
+      "description": "Paulo Coelho’s timeless novel about following your dreams and listening to your heart."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 96,
+    "fields": {
+      "title": "Thinking, Fast and Slow",
+      "slug": "thinking-fast-and-slow-daniel-kahneman",
+      "category": 10,
+      "image": "books/thinking-fast-and-slow.jpg",
+      "price": 190.00,
+      "description": "Daniel Kahneman explores the two systems that drive the way we think, make decisions, and judge the world."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 97,
+    "fields": {
+      "title": "The Subtle Art of Not Giving a F*ck",
+      "slug": "subtle-art-of-not-giving-a-fuck-mark-manson",
+      "category": 10,
+      "image": "books/subtle-art.jpg",
+      "price": 150.00,
+      "description": "Mark Manson’s counterintuitive approach to living a better life by focusing on what truly matters."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 98,
+    "fields": {
+      "title": "Becoming",
+      "slug": "becoming-michelle-obama",
+      "category": 10,
+      "image": "books/becoming.jpg",
+      "price": 180.00,
+      "description": "An intimate memoir by Michelle Obama sharing her journey from childhood to the White House."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 99,
+    "fields": {
+      "title": "1984",
+      "slug": "1984-george-orwell",
+      "category": 10,
+      "image": "books/1984.jpg",
+      "price": 100.00,
+      "description": "George Orwell’s classic dystopian novel about a totalitarian regime and surveillance society."
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 100,
+    "fields": {
+      "title": "The Power of Now: A Guide to Spiritual Enlightenment",
+      "slug": "the-power-of-now-eckhart-tolle",
+      "category": 10,
+      "image": "books/the-power-of-now.jpg",
+      "price": 170.00,
+      "description": "Eckhart Tolle’s guide to living fully in the present moment and achieving spiritual awakening."
+    }
+  }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
